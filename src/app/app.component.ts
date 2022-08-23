@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CredentialModel} from "./credential/credential.model";
 
 @Component({
   selector: 'app-root',

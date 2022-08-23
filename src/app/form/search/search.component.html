@@ -1,0 +1,12 @@
+<div class="search">
+  <div class="search__icon">
+    <app-icon name="icon-search"></app-icon>
+  </div>
+  <input
+    [placeholder]="placeholder"
+    type="text"
+    class="search__input"
+    [(ngModel)]="query"
+    (ngModelChange)="onQueryChanged()"
+  />
+</div>

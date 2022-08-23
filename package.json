@@ -1,10 +1,12 @@
 {
   "name": "pwman",
   "version": "0.0.0",
+  "main": "app.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng build --base-href ./ && APP_ENV=prod electron .",
+    "dev": "APP_ENV=dev electron .",
+    "build:darwin": "ng build --base-href ./ && APP_ENV=prod electron-packager . --platform=darwin --icon=./src/assets/icon.icns",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -18,16 +20,25 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@types/crypto-js": "^4.0.2",
+    "crypto-js": "^4.1.1",
+    "ngx-electron": "^2.2.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "nedb": "^1.8.0",
+    "nedb-promises": "^5.0.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.2.8",
     "@angular/cli": "~12.2.8",
     "@angular/compiler-cli": "~12.2.0",
+    "@types/electron": "^1.6.10",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
+    "ajv": "^8.6.3",
+    "electron": "^15.3.0",
+    "electron-packager": "^15.4.0",
     "jasmine-core": "~3.8.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

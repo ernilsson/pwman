@@ -1,0 +1,9 @@
+$iconDimensions: 16px;
+
+.icon {
+  max-width: $iconDimensions;
+  max-height: $iconDimensions;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

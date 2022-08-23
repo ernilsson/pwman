@@ -1,0 +1,17 @@
+.search {
+  background-color: var(--color-accent);
+  display: flex;
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    fill: var(--color-placeholder);
+  }
+
+  &__input {
+    padding-left: 36px;
+  }
+}

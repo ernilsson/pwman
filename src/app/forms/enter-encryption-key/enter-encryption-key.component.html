@@ -1,0 +1,16 @@
+<div class="enter-key-form">
+  <h3 class="enter-key-form__title">Enter key</h3>
+  <form [formGroup]="enterEncryptionKeyForm" (ngSubmit)="onEnterEncryptionKeyFormSubmitted()">
+    <p
+      class="enter-key-form__error-prompt"
+      *ngIf="errorPrompt !== ''"
+    >{{ errorPrompt }}</p>
+    <input
+      class="enter-key-form__input"
+      type="password"
+      placeholder="Encryption key"
+      formControlName="encryptionKey"
+    />
+    <app-success-button text="Continue"></app-success-button>
+  </form>
+</div>

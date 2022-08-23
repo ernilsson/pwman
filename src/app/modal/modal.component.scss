@@ -1,0 +1,40 @@
+.modal {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid green;
+
+  &__body {
+    z-index: 1000;
+    background-color: var(--color-bg);
+    color: white;
+    width: 80%;
+    padding: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 16px 16px rgba(0,0,0.95));
+  }
+
+  &__backdrop {
+    z-index: 900;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+  }
+
+  &__shown {
+    display: block;
+  }
+
+  &__hidden {
+    display: none;
+  }
+}
